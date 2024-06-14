@@ -88,7 +88,7 @@ fn create_template(template: CreateTemplate) {
 			.join(".github/workflows/multi-platform.yml");
 		fs::create_dir_all(action_path.parent().unwrap())
 			.nice_unwrap("Unable to create .github/workflows directory");
-		let action = reqwest::blocking::get("https://raw.githubusercontent.com/FireMario211/build-geode-mod/main/examples/multi-platform.yml").nice_unwrap("Unable to download action");
+		let action = reqwest::blocking::get("https://raw.githubusercontent.com/geode-ios/build-geode-mod/main/examples/multi-platform.yml").nice_unwrap("Unable to download action");
 		fs::write(
 			action_path,
 			action.text().nice_unwrap("Unable to write action"),

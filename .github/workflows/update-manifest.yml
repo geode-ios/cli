@@ -41,7 +41,7 @@ jobs:
         result-encoding: string
         script: |
           let rel = await github.rest.repos.getLatestRelease({
-            owner: 'RoootTheFox',
+            owner: 'geode-ios',
             repo: 'cli',
           });
 

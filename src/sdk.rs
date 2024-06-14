@@ -250,7 +250,7 @@ fn install(config: &mut Config, path: PathBuf, force: bool) {
 	builder.fetch_options(fetch);
 
 	let repo = builder
-		.clone("https://github.com/FireMario211/geode", &path)
+		.clone("https://github.com/geode-ios/geode", &path)
 		.nice_unwrap("Could not download SDK");
 
 	// set GEODE_SDK environment variable;
@@ -465,7 +465,7 @@ fn install_binaries(config: &mut Config, platform: Option<String>, version: Opti
 
 	let res = reqwest::blocking::Client::new()
 		.get(format!(
-			"https://api.github.com/repos/FireMario211/geode/releases/tags/{}",
+			"https://api.github.com/repos/geode-ios/geode/releases/tags/{}",
 			release_tag
 		))
 		.header(USER_AGENT, "github_api/1.0")
